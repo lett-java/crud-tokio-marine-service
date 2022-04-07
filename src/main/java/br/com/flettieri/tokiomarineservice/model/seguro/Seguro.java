@@ -14,7 +14,6 @@ import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -47,10 +46,6 @@ public class Seguro extends EntidadeBase {
 			foreignKey = @ForeignKey(name = "fk_seguro_cliente"))
 	private Cliente cliente;
 	
-	@PrePersist
-	public void calculaValorContratado() {
-		
-	}
 }
 
 
